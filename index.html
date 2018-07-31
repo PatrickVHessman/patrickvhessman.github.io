@@ -1,179 +1,499 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)http://patrickvhessman.com/demos/Akamai%20Landing/Preview.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FreeCodeCamp Responsive Web Design Project - Technical Documentation</title>
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Preview</title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="./index_files/bootstrap.css" rel="stylesheet">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-	
-	<style>@charset "utf-8";
-/* CSS Document */
-
-#main-container {
-	overflow-y: scroll;
-	position: fixed;
-	right: 0;
-	height: 95%;
+  <script type="text/javascript">
+function rtcScript() {
+    document.oncontextmenu = null;
+    document.onselectstart = null;
+    document.onmousedown = null;
+    document.onclick = null;
+    document.oncopy = null;
+    document.oncut = null;
+    var elements = document.getElementsByTagName('*');
+    for (var i = 0; i < elements.length; i++) {
+        elements[i].oncontextmenu = null;
+        elements[i].onselectstart = null;
+        elements[i].onmousedown = null;
+        elements[i].oncopy = null;
+        elements[i].oncut = null;
+    }
+    function preventShareThis() {
+        document.getSelection = window.getSelection = function() {
+            return {isCollapsed: true};
+        }
+    }
+    var scripts = document.getElementsByTagName('script');
+    for (var i = 0; i < scripts.length; i++) {
+        if (scripts[i].src.indexOf('w.sharethis.com') > -1) {
+            preventShareThis();
+        }
+    }
+    if (typeof Tynt != 'undefined') {
+        Tynt = null;
+    }
 }
+rtcScript();
+setInterval(rtcScript, 2000);</script><style>
+* {
+    -webkit-user-select: auto !important; /* injected by RightToCopy */
+}</style></head>
 
-#main-container h1 {
-	margin-top: 20px;
+  <body>
+
+    <div class="container">
+
+     <div class="zift_content">
+			<script type="text/javascript">zBaseComplete=true;</script><!-- Pushed : Tue, 2 Jan 2018 7:32 PM UTC-->
+<script type="text/javascript" src="./index_files/zpanel_20170605.js.download"></script>
+<script type="text/javascript" src="./index_files/zsizzle.20110528.js.download"></script>
+<script type="text/javascript" language="JavaScript" src="./index_files/ztrack.20170214.js.download"></script>
+<script type="text/javascript">
+var zBaseUrl = 'http://widgets.ziftsolutions.com/akamai.ziftsolutions.com/html/ff8081815f70731e015f782a7b192a1f';
+var zBaseKey = 'akamai.ziftsolutions.com/html/';
+var zStandaloneBaseUrl = 'http://sites.ziftsolutions.com/akamai.ziftsolutions.com/ff8081815f70731e015f782a7b192a1f';
+if (!zBaseComplete) var zBaseComplete = false; 
+
+
+/*writing core js */
+var zPanel625a4;
+var zPanelLoadCalls = new Array();
+var zLoaded = false;
+var zLoadInterval;
+function zDoPanelLoad() {
+zLoadInterval = window.setInterval(zDoPanelLoadInternal, 500);
 }
-
-#tableOfContents {
-	border-right: solid 1px #f7f7f7;
-	position: fixed;
-	left: 0;
-	height: 95%;
-	padding-top: 10px;
+function zDoPanelLoadInternal() {
+if (!zLoaded) {
+try {
+zPanel625a4 = new zwPanel('zPage','zFormId',"zFormValidation(this.getForm())",'ziftc','zSubmissionRefId','zift.trackback', 'http://sites.ziftsolutions.com/akamai.ziftsolutions.com/ff8081815f70731e015f782a7b192a1f', 'zPanel625a4');
+zPanel625a4.setEmailKey();
+zPanel625a4.loadSerialized();
+zPanel625a4.defaultForm();
+zPanel625a4.setTrackbacks();
+zSetDynamicPanelAttributes();
+for (var i = 0; i < zPanelLoadCalls.length; i++) eval(zPanelLoadCalls[i]);
+zLoaded = true;
+clearInterval(zLoadInterval);
+} catch (err) {
+zLoaded = false;
 }
-
-.tableOfContents-nav {
-	list-style: none;
+} else {
+clearInterval(zLoadInterval);
 }
-
-.tableOfContents-nav li {
-	list-style: none;
 }
-
-section {
-	padding-top: 20px;
-		padding-bottom: 20px;
+function zAddPanelLoadEvent(func) {
+zPanelLoadCalls[zPanelLoadCalls.length] = func;
 }
-
-code {
-    display: block;
-    text-align: left;
-    white-space: pre;
-    position: relative;
-    word-break: normal;
-    word-wrap: normal;
-    line-height: 2;
-    background-color: #f7f7f7;
-    padding: 15px;
-    margin: 10px;
-    border-radius: 5px;
-}
-
-footer {
-	position: fixed;
-	bottom: 0;
-	background-color: #f7f7f7;
-	width: 100%;
-	padding: 10px 20px;
-	height: 5%;
-}
-
-@media only screen and (max-width: 768px) {
-	#main-container, footer, #tableOfContents {
-		position: inherit;
-		height: auto;
-	}
-	#tableOfContents {
-		border: none;
-	}
-}</style>
-</head>
-
-<body>
-<div class="container-fluid">
-<div class="row">
-	<div class="col-sm-3 overflow" id="tableOfContents">
-	<nav>
-	<header><h2>Random Generators for Dungeons and Dragons</h2></header>
-		<ul class="tableOfContents-nav">
-		<li><a href="#introduction" class="nav-link">Introduction</a></li>
-			<li><a href="#Setting_Up_the_Function" class="nav-link">Setting Up the Function</a></li>
-			<li><a href="#Creating_the_Random_Number_Generator" class="nav-link">Creating the Random Number Generator</a></li>
-			<li><a href="#Create_a_Switch_Statement" class="nav-link">Creating a Switch Statement</a></li>
-			<li><a href="#Finishing_Up" class="nav-link">Finishing Up</a></li>
-			<li><a href="#Testing_it_Out" class="nav-link">Testing it Out</a></li>
-		</ul>
-	</nav>
-	</div>
-	<div class="col-sm-9 overflow" id="main-container">
-	<main id="main-doc">
-	<header><h1>Creating a Random Generator for Dungeons and Dragons</h1></header>
-	<section id="introduction" class="main-section">
-		<header><h2>Introduction</h2></header>
-	<p>As a Dungeon Master, you often find yourself in need of help for random events, discoveries, or encounters. The books provide many tables to roll dice for random elements, but why not automate the process?</p>
-<p>Simple JavaScript functions can be created to instantly run the random generations for you, and this guide will show you how!</p>
-		</section>
-		<section id="Setting_Up_the_Function" class="main-section">
-		<header><h2>Setting Up the Function</h2></header>
-		<p>The function to contain our random number and the generated values must be created. First, declare a variable to contain the value of your random generator.</p>
-			<code>var randomEncounter = "";</code>
-			<p>Next, name your function.</p>
-			<code>function encounterGenerator(value) {
-
-}</code>
-		</section>
-		<section id="Creating_the_Random_Number_Generator" class="main-section">
-		<header><h2>Creating the Random Number Generator</h2></header>
-			<p>Inside your function, create a new variable that contains a randomly generated number.</p>
-			<code>var randomNumber = Math.floor(Math.random()*6+1);</code>
-			<p>Replace the number 6 in the example below with however many variables the random table is supposed to have. Ie, a d10 table would look like this:</p>
-			<code>var randomNumber = Math.floor(Math.random()*10+1);</code>
-		</section>
-		<section id="Create_a_Switch_Statement" class="main-section">
-		<header><h2>Create a Switch Statement</h2></header>
-	<p>Now, we're going to create a <em>switch</em> statement that contains each of the possible outcomes of the random table. Pass the <em>randomNumber</em> variable into it.</p>
-			<code>switch(randomNumber) { 
-case 1: value = "Six kobolds"; break;
-case 2: value = "Five goblins"; break;
-case 3: value = "Four bandits"; break;
-case 4: value = "Three orcs"; break;
-case 5: value = "Two owlbears"; break;
-case 6: value = "One Tarrasque"; break;
-}</code>
-		</section>
-		<section id="Finishing_Up" class="main-section">
-		<header><h2>Finishing up</h2></header>
-		<P>Lastly, we'll pack up the randomly generated value we created and prepare to return it from the function.</P>
-			<code>return value;</code>
-			<p>Your code should look something like this:</p>
-			<code>var randomEncounter = "";
-				
-function encounterGenerator(value) {
-var randomNumber = Math.floor(Math.random()*6+1);
-switch(randomNumber) { 
-case 1: value = "Six kobolds"; break;
-case 2: value = "Five goblins"; break;
-case 3: value = "Four bandits"; break;
-case 4: value = "Three orcs"; break;
-case 5: value = "Two owlbears"; break;
-case 6: value = "One Tarrasque"; break;
-}
-				
+function zQStringValue(param) {
+var query=document.location.search.substring(1);
+if (query.length > 0){
+var params=query.split('&');
+for (var i=0 ; i<params.length ; i++){
+var pos = params[i].indexOf('=');
+var name = params[i].substring(0, pos);
+var value = params[i].substring(pos + 1);
+if (name == param) {
 return value;
+break;
 }
-			</code>
-		</section>
-		<section id="Testing_it_Out" class="main-section">
-		<header><h2>Testing it Out</h2></header>
-		<p>Open up a JavaScript console and enter the code we just created and hit <em>Enter</em> on your keyboard. After that, type in this code to run the function:</p>
-			<code>encounterGenerator(randomEncounter);</code>
-		<p>After hitting <em>Enter</em> again, type in this code to display the random value:</p>
-			<code>console.log(randomEncounter);</code>
-		<p>The console will then display your encounter. Hope your random encounter isn't too devastating!</p>
-		</section>
-		</main>
-	</div>
-	</div>	
-	</div>
-	<footer>
-	Created by Patrick Hessman as part of the <a href="https://freecodecamp.org/" target="_blank">Free Code Camp</a> curriculum. 
-</footer>
-</body>
-</html>
+}
+}
+return null;
+}
+var zPage = zQStringValue('zPage');
+try { if (typeof(zPageOverride) != 'undefined') zPage = zPageOverride; } catch (err) {} 
+
+var zBaseSkipTrack = false; 
+var zBase = zQStringValue('zBase');
+try { if (typeof(zBase) != 'undefined' && zBase != null) { zBaseUrl = 'http://widgets.ziftsolutions.com/' + zBaseKey + zBase; zBaseSkipTrack = true; }} catch (err) {} 
+
+function addZiftLoadEvent(func) { 
+  if (document.readyState === "complete") { try{func();}catch(e){console.error(e)} } else {   if (window.attachEvent){    return window.attachEvent('onload', func);  }else{    return window.addEventListener('load', func, false);  }} }
+function zScriptInclude(page) {
+var el = document.createElement('script');
+el.type = 'text/javascript';
+if(document.location.protocol === 'https:' && page.indexOf('http://') === 0) {
+page = 'https://' + page.substring('7');
+}
+el.src = page ;
+el.async = false;
+return el;}
+function zWriteScriptInclude(page) {
+pt_ff8081815f70731e015f782a7b192a1f.appendChild(zScriptInclude(zBaseUrl + (zPage?'/'+zPage:'')));
+}
+function zWriteElementInclude(el) {
+pt_ff8081815f70731e015f782a7b192a1f.appendChild(el);
+}
+
+
+/*processing dynamic step rules and routing */
+var ztrack_ff8081815f70731e015f782a7b192a1f;if (typeof(zBase) == 'undefined' || zBase == null || zBase == 'null' || (zBase != null && zBaseComplete)) {addZiftLoadEvent(function() { ztrack_ff8081815f70731e015f782a7b192a1f = new ZTrack({ h: 'https://analytics.ziftsolutions.com/', i: (zBase?zBase:'ff8081815f70731e015f782a7b192a1f'), p: 'ff8081815a8d0e82015aa9915f8b6879', c: 'ff80818154e125620154e3fe17e51940', t: 'f'} );}); zTS = 'https://akamai.ziftsolutions.com/';}
+var zroute = zQStringValue('zroute');
+
+if (zroute != null && zroute != 'null') setTimeout(function() {window.location = decodeURIComponent(zroute);}, 500);
+
+</script>
+
+<script src="./index_files/responsive-bootstrap-V2.js.download" type="text/javascript" charset="utf-8"></script><script src="./index_files/jquery.min.js.download" type="text/javascript" charset="utf-8"></script><script src="./index_files/venobox.min.js.download" type="text/javascript" charset="utf-8"></script><script src="./index_files/0" type="text/javascript" charset="utf-8"></script><div id="pw_ff8081815f70731e015f782a7b192a1f" class="z_panel_base z_p_Akamai_ATT_Web_Security_Print_Mailer_Landing_Page z_ps_Landing">
+<span><span><span style="display:none"> <link href="./index_files/z_bootstrap-V2.css" rel="stylesheet"> <span> </span> <span> <link rel="stylesheet" href="./index_files/venobox.css"> </span> <style type="text/css"> body{
+    overflow-x: hidden;
+   }
+ li {
+ margin-bottom: 10px;
+}
+   #z_wrapper {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                max-width: none;
+                margin: 0px auto;
+            }
+        
+            #z_wrapper label {
+                font-weight: normal;
+            }
+        
+            .other-content,
+            .other-content-2 {
+                display: none;
+            }
+        
+            .other-content.show,
+            .other-content-2.show {
+                display: inline-block!important;
+                width: 100%;
+                max-width: 500px;
+            }
+        
+            #z_wrapper hr {
+                border: 0;
+                border-top: 1px solid #efefef;
+                margin-bottom: 25px;
+            }
+        
+            .z_col-12 {
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+        
+            .z_accent {
+                background-color: #efefef;
+            }
+        
+            #z_wrapper .z_header {
+                text-align: left;
+                font-size: 24px;
+                font-weight: normal;
+            }
+        
+            .z_banner {
+                display: block;
+                width: 100%;
+                height: auto;
+                margin: 32px auto 15px auto;
+            }
+        
+            .z_img {
+                max-width: 100%;
+                height: auto;
+                display: inline-block !important;
+            }
+        
+            #z_wrapper .z_text-center {
+                text-align: center;
+            }
+        
+            #z_wrapper .h2 {
+                display: block;
+                margin-top: 30px;
+            }
+         
+        
+            fieldset {
+                margin: 15px 0;
+                padding: 0;
+                text-align: center;
+                border: 0;
+            }
+        
+            .z_form-group label {
+                display: none;
+            }
+        
+            .z_form-group input {
+                display: block;
+                width: 100%;
+                margin: 0 0 8px;
+                padding: 7px 15px;
+                transition: border .2s;
+                border: 1px solid #dde;
+                border-radius: 0px;
+    line-height: 100%;
+            }
+        
+            #z_form {
+                margin: 25px 0;
+            }
+         /*
+            fieldset .z_form-group:first-of-type {
+                margin-top: 5px;
+            }
+         */
+            .z_form-group input:focus {
+                border-color: #999;
+                outline: none;
+            }
+        
+             :not(fieldset) .z_form-group {
+                text-align: center;
+            }
+        
+            .z_form-group .z_btn {
+                display: inline-block;
+                margin: 15px auto 0;
+                padding: 7px 50px;
+                text-decoration: none;
+                color: white;
+                border-radius: 0;
+                background-color: blue;
+            }
+         
+         .z_form-group.z_input_50{
+          width: 50%;
+          float: left;
+         }
+         
+         .z_form-group.z_input_50.left{
+          padding-right: 10px;
+         }
+        
+            #z_form small {
+                display: block;
+                margin: 5px 0;
+                text-align: center;
+                color: #888;
+            }
+        
+            .z_footer {
+                padding-top: 15px !important;
+            }
+        
+            .z_footer .z_img {
+                width: 32px;
+                display: inline-block;
+            }
+        
+            #z_wrapper .z_vendor-logo .z_img {
+                display: inline-block;
+                width: 150px;
+                margin: 0 auto;
+            }
+        
+            .z_vendor-logo {
+                text-align: right;
+            }
+        
+            .z_question {
+                text-align: left;
+    margin-bottom: 20px;
+            }
+        .z_question p{
+         margin: 0 0 10px 0;
+        }
+        
+            #z_wrapper .z_question .z_form-check-label {
+                display: block;
+            }
+         
+         #z_wrapper .z_question .z_form-check-label.other-label{
+          display: inline;
+         }
+        
+            .z_nostyle-list {
+                list-style: none;
+                padding-left: 0;
+            }
+        
+            .z_footer .z_col-12 a {
+                text-decoration: none
+            }
+        
+            #z_wrapper .z_accent-image {
+                display: inline-block;
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+        
+            #z_wrapper .z_accent-image-wrapper {
+                margin: 15px 0;
+                text-align: center;
+            }
+        
+            #z_wrapper .z_body-wrapper {
+                margin: 15px auto;
+                display: block!important;
+                max-width: 100%;
+                height: auto;
+            }
+        
+            abbr {
+                border: 0;
+            }
+        
+            #z_wrapper .z_legal-text,
+            #z_wrapper .z_legal-text a {
+                color: #888888!important;
+                font-size: 10px;
+                line-height: 150%
+            }
+        
+            #z_wrapper .z_legal-text a {
+                text-decoration: none;
+            }
+        
+            .social-icon {
+                display: inline-block;
+                margin-right: 7px;
+            }
+         .z_partner-details, .z_partner-details a{ color:#888888; text-decoration:none; font-size:11px; } 
+         .z_button-group a{color:#888888;text-decoration:underline;} 
+         
+         .z_formContainer {
+         background-color: #00b0eb; 
+         COLOR: #FFF;
+         padding: 15px;
+         }
+         
+         #z_wrapper legend {
+              display: block;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+            font-size: 21px;
+            line-height: inherit;
+            color: #FFF;
+            border: 0;
+            border-bottom: none;
+         }
+         
+         .z_form-group .z_btn {
+            display: inline-block;
+            margin: 15px auto 0;
+            padding: 7px 25px;
+            text-decoration: none;
+            color: white;
+            border-radius: 0;
+            background-color: #00b0eb;
+         border: 1px solid #fff;
+        }
+        
+        .z_header {
+         color:  #00b0eb;
+         font-family: 'Open Sans',sans-serif;
+        }
+        
+        .z_sansFont {
+         font-family: 'Open Sans',sans-serif; 
+        } 
+        
+        .z_arrow {
+        max-width: 150px;
+            width: 100%;
+            position: absolute;
+            top: 12px; 
+         left: 7px;
+        }
+        
+        .z_giftcardPosition {
+        margin-top: 15%; 
+        }
+  #z_wrapper .z_footer.z_row, #z_wrapper .z_hr.z_row, #z_wrapper .z_row.z_text-center{
+   width: 100%;
+   margin: 0;
+  }
+  #z_wrapper .z_form_err{
+   color: red;
+   font-weight: bold;
+  }
+  
+  .z_responsiveBanner {
+    background-size: cover;
+    background-position: top;
+    background-image: url("http://static.ziftsolutions.com/files/ff8081815f70731e015f781b10f42902/print-mailer_banner2.png");
+ text-align:center;
+   background-repeat: no-repeat;
+} 
+
+.z_responsiveBanner h1 {
+ color: black;
+    margin: 80px 20px 120px 20px;
+ font-weight: 100;
+    font-size: 1.5em;
+ text-align: left;
+}
+        
+        @media screen and (max-width: 420px) {
+            #z_wrapper .z_header{
+    font-size: 18px;
+   }
+ .z_banner-width-adjust {
+ width: 100% !important;
+} 
+
+   #z_wrapper .z_partner_logo{
+    text-align: center;
+    padding: 20px 0;
+   }
+   .z_arrow {
+    display: none;
+   }
+   
+   .z_responsiveBanner {
+   background-image: url("http://static.ziftsolutions.com/files/ff8081815f70731e015f78e2c1933088/responsive-landing_banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center !important;
+   }
+        } </style> </span> <div id="z_wrapper" class="z_xs z_sm z_md z_lg"> <div class="z_container-fluid z_sansFont"> <div class="z_row z_responsiveBanner"> <div class="z_col-sm-6 z_banner-width-adjust"> <h1>With AT&amp;T Content Delivery Network Security Solutions Protecting Your Website  and Web Applications, <strong>You’ll Sleep Easier,  Worry-Free.</strong></h1> </div> </div> <!--<div class="z_row"><img class="z_banner" src="http://static.ziftsolutions.com/files/ff8081815e550637015e629eba550129/banner_image.png" alt="ATT Wants to Hear from You" width="100%" /></div> --> <div class="z_row z_body_row" style="margin-top:20px;"> <div class="z_col-md-8" style="padding: 0px 30px;"><img src="./index_files/att_logo.png" style="width: 100%; max-width: 60px; MARGIN-BOTTOM: 15px;" alt=""> <h3 style="font-weight: bold;">Say ‘Goodbye’ to Worries about Web Fraud, DDoS, and Web Downtime</h3> <div class="z_body-wrapper"> <p>You’ll rest easier when you choose security solutions that mitigate the risks and challenges of doing business online. The risks include website and web application slowdowns as well as security breaches, all of which can lead to lost revenue, customer churn, and a damaged brand reputation.</p> <p>We’d like to schedule a time for you and one of our security specialists to discuss your web security concerns. After your call with the specialist, arrangements will be made to send your $50 Amazon gift card* via email. Just fill out the form and our scheduler will be in touch.</p> <h3 style="font-weight: bold;">What to Expect</h3> <ul> <li>Our scheduler will call you soon for an exploratory conversation to    further identify your challenges and potential need for AT&amp;T web    security solutions.</li> <li>The scheduler will also arrange an introductory conversation between   you and an AT&amp;T security specialist to discuss if AT&amp;T web security    solutions would be a good fit.</li> <li>After your conversation with the AT&amp;T security specialist, we’ll send    you the complimentary Amazon gift card* via email.</li> </ul> <br> <p><strong>This offer is being extended by TSL Marketing on behalf of AT&amp;T.</strong></p> <p style="font-size: 10px; font-style: italic;">*Gift cards are for qualified IT responders only and are limited while supplies last.</p> </div> </div> <div class="z_col-md-4"> <div style="Margin:10px 0px;">&nbsp;</div> <div class="z_row"> <div class="z_col-sm-5 z_arrow" style="text-align:center; "><img src="./index_files/left-arrow.png" class="z_arrow" alt=""></div> <div class="z_col-sm-7">&nbsp;</div> </div> <div class="z_formContainer"> <div class="z_giftcardPosition">&nbsp;</div> <div class=" z_row"> <div class="z_col-sm-12"><legend>Talk to AT&amp;T about web security and get a $50 Amazon Gift Card*.</legend> <div style="text-align: center"><img src="./index_files/50-dollar-amazon_gift-card.png" style="max-width: 300px; width: 100%;" alt=""></div> <form id="zFormId" action="https://form.ziftsolutions.com/open/ExternalFormProcessor.html" onsubmit="return zFormValidation(this)" method="post"> <fieldset> <div class="z_form-group"><input placeholder="Full Name *" zf="Name" id="name" class="z_form-control" type="text" name="name"></div> <div class="z_form-group"><input placeholder="Company Email *" zf="Email" id="email" class="z_form-control" type="text" name="email"></div> <div class="z_form-group"><input placeholder="Phone *" zf="Phone Number" id="phone_number" class="z_form-control" type="text" name="phone_number"></div> <div class="z_form-group"><input placeholder="Company *" id="company" zf="Company" class="z_form-control" type="text" name="company"></div> </fieldset> <input ziftinternal="true" name="pwid" value="ff8081815f70731e015f782a7b192a1f" type="hidden"><input ziftinternal="true" name="pid" value="ff8081815f70731e015f77eca1a625a4" type="hidden"><input ziftinternal="true" name="stepid" value="ff8081815f70731e015f77ed042425aa" type="hidden"><input ziftinternal="true" name="confirmMsg" id="confirmMsg" value="" type="hidden"><input name="zSubmissionRefId" id="zSubmissionRefId" value="" type="hidden"><input name="stepff8081815f70731e015f77ed042425aa" id="stepff8081815f70731e015f77ed042425aa" value="submitted" type="hidden"><input name="emailKey" id="emailKey" value="" type="hidden"><input name="zt_uuid" id="zt_uuid" value="" type="hidden" cookie="ignore" ziftinternal="true"><span action="https://form.ziftsolutions.com/open/ExternalFormProcessor.html" onsubmit="return zFormValidation(this)" method="post" id="zFormId_bak"></span></form> <div class="z_text-center" style="font-size: 14px; color: #fff;"> <p class="z_form_err" style="display: none;">You have not completed all of the required fields.  Please complete the fields outlined in red.</p> </div> <div class="z_form-group" style="margin-bottom:15px; text-align: center;"><a class="z_btn z_button z_real_submit" href="http://patrickvhessman.com/demos/Akamai%20Landing/Preview.html#" style="display: none; text-align: center" title="Confirmation">Submit My Survey</a> <a class="z_btn z_pull-right z_button submit" style="cursor: pointer;">Submit My Survey</a></div> </div> </div> </div> </div> </div> </div> <div class="z_row z_hr" style="border-top:5px solid #888888;">&nbsp;</div> <span name="Landing Footer Block.Content"><div class="z_row z_footer"> <div class="z_col-sm-12"> <div class="z_partner-details"> <div style="font-family: Arial, sans-serif;font-size:12px;Margin-bottom:16px;line-height:150%"><strong>Content Delivery Network at AT&amp;T</strong><br> <span style="text-decoration:none">TSL Marketing<br> 8840 Stanford Blvd. Ste 3700<br> Columbia, MD 21045<br> </span></div> </div> </div> <div class="z_row z_text-center"> <div class="z_col-12" style="margin-top: 15px;"> <div class="z_legal-text">©Copyright 2018</div> </div> </div> </div></span></div><br> </span></span></div>
+<script type="text/javascript">
+function zGetNextPageInternal(param, link) {
+return 'ff8081815f70731e015f77ed042425aa';
+}
+function zGotoNextPageInternal(param, link) {
+zPanel625a4.setPageCookieForNextPage(zQStringValue('zPage'));
+zPanel625a4.incrementPageCount();
+zPanel625a4.gotoPage(param, zNextPage, link, true);
+return zNextPage;
+}
+function zFormValidation(formElem){
+return true;
+}
+function zSetDynamicPanelAttributes() { 
+zPanel625a4.setExternalFormUrl('https://form.ziftsolutions.com/open/ExternalFormProcessor.html');
+}
+
+</script><script type="text/javascript">
+zDoPanelLoad();
+
+</script><script type="text/javascript">
+
+</script>
+
+			 
+      </div>
+
+    </div> <!-- /container -->
+
+  
+
+<script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script><link rel="stylesheet" type="text/css" href="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/css/content.css"></body><loom-container id="lo-engage-ext-container"><loom-shadow data-reactroot="" classname="resolved"></loom-shadow></loom-container></html>
