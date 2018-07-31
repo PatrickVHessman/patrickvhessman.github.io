@@ -1,0 +1,140 @@
+/* Pushed : Fri, 22 Jun 2018 7:14 PM UTC */
+
+
+/*Putting onload function - ensuring visibility */
+function zAddOnLoad(func)  {var o = window.onload;if (typeof window.onload != 'function') {window.onload = func;} else {window.onload = function() { try { if (o) { o(); } } catch (err) {} func(); }}};
+
+/*Identifying script location - parent tag */
+var scriptTag = document.scripts[document.scripts.length - 1];var pt_ff8081815f70731e015f782a7b192a1f = scriptTag.parentNode;
+if(zQStringValue('zBase')){window['pt_'+zQStringValue('zBase')]=pt_ff8081815f70731e015f782a7b192a1f;}
+
+try{
+if (document.getElementById('ff8081815f70731e015f782a7b192a1f')) { 
+	pt_ff8081815f70731e015f782a7b192a1f = document.getElementById('ff8081815f70731e015f782a7b192a1f'); 
+}
+} catch (err) {}
+
+/*writing core script includes */
+var s_758 = document.createElement('script');s_758.type = 'text/javascript';s_758.async = false;s_758.src = (document.location.protocol=='https:' && 'https://static.ziftsolutions.com/widgets/js/zpanel_20170605.js'.indexOf('http://')==0?'https://'+'https://static.ziftsolutions.com/widgets/js/zpanel_20170605.js'.substring(7):'https://static.ziftsolutions.com/widgets/js/zpanel_20170605.js');pt_ff8081815f70731e015f782a7b192a1f.appendChild(s_758);
+var s_1202 = document.createElement('script');s_1202.type = 'text/javascript';s_1202.async = false;s_1202.src = (document.location.protocol=='https:' && 'https://static.ziftsolutions.com/widgets/js/zsizzle.20110528.js'.indexOf('http://')==0?'https://'+'https://static.ziftsolutions.com/widgets/js/zsizzle.20110528.js'.substring(7):'https://static.ziftsolutions.com/widgets/js/zsizzle.20110528.js');pt_ff8081815f70731e015f782a7b192a1f.appendChild(s_1202);
+var s_1654 = document.createElement('script');s_1654.type = 'text/javascript';s_1654.async = false;s_1654.src = (document.location.protocol=='https:' && 'https://static.ziftsolutions.com/widgets/js/ztrack.20170214.js'.indexOf('http://')==0?'https://'+'https://static.ziftsolutions.com/widgets/js/ztrack.20170214.js'.substring(7):'https://static.ziftsolutions.com/widgets/js/ztrack.20170214.js');pt_ff8081815f70731e015f782a7b192a1f.appendChild(s_1654);
+
+
+/*adding key variables */
+var zBaseUrl = 'https://widgets.ziftsolutions.com/akamai.ziftsolutions.com/js/ff8081815f70731e015f782a7b192a1f';
+var zBaseKey = 'akamai.ziftsolutions.com/js/';
+var zStandaloneBaseUrl = 'https://sites.ziftsolutions.com/akamai.ziftsolutions.com/ff8081815f70731e015f782a7b192a1f';
+if (!zBaseComplete) var zBaseComplete = false; 
+
+
+/*writing core js */
+var zPanel625a4;
+var zPanelLoadCalls = new Array();
+var zLoaded = false;
+var zLoadInterval;
+function zDoPanelLoad() {
+zLoadInterval = window.setInterval(zDoPanelLoadInternal, 500);
+}
+function zDoPanelLoadInternal() {
+if (!zLoaded) {
+try {
+zPanel625a4 = new zwPanel('zPage','zFormId',"zFormValidation(this.getForm())",'ziftc','zSubmissionRefId','zift.trackback', 'https://sites.ziftsolutions.com/akamai.ziftsolutions.com/ff8081815f70731e015f782a7b192a1f', 'zPanel625a4');
+zPanel625a4.setEmailKey();
+zPanel625a4.loadSerialized();
+zPanel625a4.defaultForm();
+zPanel625a4.setTrackbacks();
+zSetDynamicPanelAttributes();
+for (var i = 0; i < zPanelLoadCalls.length; i++) eval(zPanelLoadCalls[i]);
+zLoaded = true;
+clearInterval(zLoadInterval);
+} catch (err) {
+zLoaded = false;
+}
+} else {
+clearInterval(zLoadInterval);
+}
+}
+function zAddPanelLoadEvent(func) {
+zPanelLoadCalls[zPanelLoadCalls.length] = func;
+}
+function zQStringValue(param) {
+var query=document.location.search.substring(1);
+if (query.length > 0){
+var params=query.split('&');
+for (var i=0 ; i<params.length ; i++){
+var pos = params[i].indexOf('=');
+var name = params[i].substring(0, pos);
+var value = params[i].substring(pos + 1);
+if (name == param) {
+return value;
+break;
+}
+}
+}
+return null;
+}
+var zPage = zQStringValue('zPage');
+try { if (typeof(zPageOverride) != 'undefined') zPage = zPageOverride; } catch (err) {} 
+
+var zBaseSkipTrack = false; 
+var zBase = zQStringValue('zBase');
+try { if (typeof(zBase) != 'undefined' && zBase != null) { zBaseUrl = 'https://widgets.ziftsolutions.com/' + zBaseKey + zBase; zBaseSkipTrack = true; }} catch (err) {} 
+
+function addZiftLoadEvent(func) { 
+  if (document.readyState === "complete") { try{func();}catch(e){console.error(e)} } else {   if (window.attachEvent){    return window.attachEvent('onload', func);  }else{    return window.addEventListener('load', func, false);  }} }
+function zScriptInclude(page) {
+var el = document.createElement('script');
+el.type = 'text/javascript';
+if(document.location.protocol === 'https:' && page.indexOf('http://') === 0) {
+page = 'https://' + page.substring('7');
+}
+el.src = page ;
+el.async = false;
+return el;}
+function zWriteScriptInclude(page) {
+pt_ff8081815f70731e015f782a7b192a1f.appendChild(zScriptInclude(zBaseUrl + (zPage?'/'+zPage:'')));
+}
+function zWriteElementInclude(el) {
+pt_ff8081815f70731e015f782a7b192a1f.appendChild(el);
+}
+
+
+/*processing dynamic step rules and routing */
+var ztrack_ff8081815f70731e015f782a7b192a1f;if (typeof(zBase) == 'undefined' || zBase == null || zBase == 'null' || (zBase != null && zBaseComplete)) {addZiftLoadEvent(function() { ztrack_ff8081815f70731e015f782a7b192a1f = new ZTrack({ h: 'https://analytics.ziftsolutions.com/', i: (zBase?zBase:'ff8081815f70731e015f782a7b192a1f'), p: 'ff8081815a8d0e82015aa9915f8b6879', c: 'ff80818154e125620154e3fe17e51940', t: 'f'} );}); zTS = 'https://akamai.ziftsolutions.com/';}
+var zroute = zQStringValue('zroute');
+
+if (zroute != null && zroute != 'null') setTimeout(function() {window.location = decodeURIComponent(zroute);}, 500);
+
+
+/*writing panel body */
+var callDoPanelLoad=true;
+if (zPage != null && zPage != 'null' && zPage != '') {
+zWriteScriptInclude(zPage);
+callDoPanelLoad=false;
+} else if (zBase != null && zBase != 'null' && !zBaseComplete) {  zBaseComplete=true; zWriteElementInclude(zScriptInclude(zBaseUrl)); } else {
+zWriteElementInclude(zScriptInclude('https://s3.amazonaws.com/static.ziftsolutions.com/codebase/bootstrap/responsive-bootstrap-V2.js'));
+zWriteElementInclude(zScriptInclude('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js'));
+zWriteElementInclude(zScriptInclude('//cdnjs.cloudflare.com/ajax/libs/venobox/1.6.0/venobox.min.js'));
+zWriteElementInclude(zScriptInclude('https://dynamic.ziftsolutions.com/ff8081815f70731e015f77eca1a625a4/Landing/ff8081815f70731e015f782a7b192a1f/0'));
+var zContent = {"content":"<span><span><span style=\"display:none\"> <link href=\"https://s3.amazonaws.com/static.ziftsolutions.com/codebase/bootstrap/z_bootstrap-V2.css\" rel=\"stylesheet\"><\/link> <span> <\/span> <span> <link rel=\"stylesheet\" href=\"//s3.amazonaws.com/static.ziftsolutions.com/files/ff808181592485f4015945febbcd5601/venobox.css\"><\/link> <\/span> <style type=\"text/css\"> body{\r\n    overflow-x: hidden;\r\n   }\r\n li {\r\n margin-bottom: 10px;\r\n}\r\n   #z_wrapper {\r\n                font-family: Arial, Helvetica, sans-serif;\r\n                font-size: 15px;\r\n                max-width: none;\r\n                margin: 0px auto;\r\n            }\r\n        \r\n            #z_wrapper label {\r\n                font-weight: normal;\r\n            }\r\n        \r\n            .other-content,\r\n            .other-content-2 {\r\n                display: none;\r\n            }\r\n        \r\n            .other-content.show,\r\n            .other-content-2.show {\r\n                display: inline-block!important;\r\n                width: 100%;\r\n                max-width: 500px;\r\n            }\r\n        \r\n            #z_wrapper hr {\r\n                border: 0;\r\n                border-top: 1px solid #efefef;\r\n                margin-bottom: 25px;\r\n            }\r\n        \r\n            .z_col-12 {\r\n                margin-bottom: 15px;\r\n                margin-top: 15px;\r\n            }\r\n        \r\n            .z_accent {\r\n                background-color: #efefef;\r\n            }\r\n        \r\n            #z_wrapper .z_header {\r\n                text-align: left;\r\n                font-size: 24px;\r\n                font-weight: normal;\r\n            }\r\n        \r\n            .z_banner {\r\n                display: block;\r\n                width: 100%;\r\n                height: auto;\r\n                margin: 32px auto 15px auto;\r\n            }\r\n        \r\n            .z_img {\r\n                max-width: 100%;\r\n                height: auto;\r\n                display: inline-block !important;\r\n            }\r\n        \r\n            #z_wrapper .z_text-center {\r\n                text-align: center;\r\n            }\r\n        \r\n            #z_wrapper .h2 {\r\n                display: block;\r\n                margin-top: 30px;\r\n            }\r\n         \r\n        \r\n            fieldset {\r\n                margin: 15px 0;\r\n                padding: 0;\r\n                text-align: center;\r\n                border: 0;\r\n            }\r\n        \r\n            .z_form-group label {\r\n                display: none;\r\n            }\r\n        \r\n            .z_form-group input {\r\n                display: block;\r\n                width: 100%;\r\n                margin: 0 0 8px;\r\n                padding: 7px 15px;\r\n                transition: border .2s;\r\n                border: 1px solid #dde;\r\n                border-radius: 0px;\r\n    line-height: 100%;\r\n            }\r\n        \r\n            #z_form {\r\n                margin: 25px 0;\r\n            }\r\n         /*\r\n            fieldset .z_form-group:first-of-type {\r\n                margin-top: 5px;\r\n            }\r\n         */\r\n            .z_form-group input:focus {\r\n                border-color: #999;\r\n                outline: none;\r\n            }\r\n        \r\n             :not(fieldset) .z_form-group {\r\n                text-align: center;\r\n            }\r\n        \r\n            .z_form-group .z_btn {\r\n                display: inline-block;\r\n                margin: 15px auto 0;\r\n                padding: 7px 50px;\r\n                text-decoration: none;\r\n                color: white;\r\n                border-radius: 0;\r\n                background-color: blue;\r\n            }\r\n         \r\n         .z_form-group.z_input_50{\r\n          width: 50%;\r\n          float: left;\r\n         }\r\n         \r\n         .z_form-group.z_input_50.left{\r\n          padding-right: 10px;\r\n         }\r\n        \r\n            #z_form small {\r\n                display: block;\r\n                margin: 5px 0;\r\n                text-align: center;\r\n                color: #888;\r\n            }\r\n        \r\n            .z_footer {\r\n                padding-top: 15px !important;\r\n            }\r\n        \r\n            .z_footer .z_img {\r\n                width: 32px;\r\n                display: inline-block;\r\n            }\r\n        \r\n            #z_wrapper .z_vendor-logo .z_img {\r\n                display: inline-block;\r\n                width: 150px;\r\n                margin: 0 auto;\r\n            }\r\n        \r\n            .z_vendor-logo {\r\n                text-align: right;\r\n            }\r\n        \r\n            .z_question {\r\n                text-align: left;\r\n    margin-bottom: 20px;\r\n            }\r\n        .z_question p{\r\n         margin: 0 0 10px 0;\r\n        }\r\n        \r\n            #z_wrapper .z_question .z_form-check-label {\r\n                display: block;\r\n            }\r\n         \r\n         #z_wrapper .z_question .z_form-check-label.other-label{\r\n          display: inline;\r\n         }\r\n        \r\n            .z_nostyle-list {\r\n                list-style: none;\r\n                padding-left: 0;\r\n            }\r\n        \r\n            .z_footer .z_col-12 a {\r\n                text-decoration: none\r\n            }\r\n        \r\n            #z_wrapper .z_accent-image {\r\n                display: inline-block;\r\n                max-width: 100%;\r\n                height: auto;\r\n                margin: 0 auto;\r\n            }\r\n        \r\n            #z_wrapper .z_accent-image-wrapper {\r\n                margin: 15px 0;\r\n                text-align: center;\r\n            }\r\n        \r\n            #z_wrapper .z_body-wrapper {\r\n                margin: 15px auto;\r\n                display: block!important;\r\n                max-width: 100%;\r\n                height: auto;\r\n            }\r\n        \r\n            abbr {\r\n                border: 0;\r\n            }\r\n        \r\n            #z_wrapper .z_legal-text,\r\n            #z_wrapper .z_legal-text a {\r\n                color: #888888!important;\r\n                font-size: 10px;\r\n                line-height: 150%\r\n            }\r\n        \r\n            #z_wrapper .z_legal-text a {\r\n                text-decoration: none;\r\n            }\r\n        \r\n            .social-icon {\r\n                display: inline-block;\r\n                margin-right: 7px;\r\n            }\r\n         .z_partner-details, .z_partner-details a{ color:#888888; text-decoration:none; font-size:11px; } \r\n         .z_button-group a{color:#888888;text-decoration:underline;} \r\n         \r\n         .z_formContainer {\r\n         background-color: #00b0eb; \r\n         COLOR: #FFF;\r\n         padding: 15px;\r\n         }\r\n         \r\n         #z_wrapper legend {\r\n              display: block;\r\n            width: 100%;\r\n            padding: 0;\r\n            margin-bottom: 20px;\r\n            font-size: 21px;\r\n            line-height: inherit;\r\n            color: #FFF;\r\n            border: 0;\r\n            border-bottom: none;\r\n         }\r\n         \r\n         .z_form-group .z_btn {\r\n            display: inline-block;\r\n            margin: 15px auto 0;\r\n            padding: 7px 25px;\r\n            text-decoration: none;\r\n            color: white;\r\n            border-radius: 0;\r\n            background-color: #00b0eb;\r\n         border: 1px solid #fff;\r\n        }\r\n        \r\n        .z_header {\r\n         color:  #00b0eb;\r\n         font-family: 'Open Sans',sans-serif;\r\n        }\r\n        \r\n        .z_sansFont {\r\n         font-family: 'Open Sans',sans-serif; \r\n        } \r\n        \r\n        .z_arrow {\r\n        max-width: 150px;\r\n            width: 100%;\r\n            position: absolute;\r\n            top: 12px; \r\n         left: 7px;\r\n        }\r\n        \r\n        .z_giftcardPosition {\r\n        margin-top: 15%; \r\n        }\r\n  #z_wrapper .z_footer.z_row, #z_wrapper .z_hr.z_row, #z_wrapper .z_row.z_text-center{\r\n   width: 100%;\r\n   margin: 0;\r\n  }\r\n  #z_wrapper .z_form_err{\r\n   color: red;\r\n   font-weight: bold;\r\n  }\r\n  \r\n  .z_responsiveBanner {\r\n    background-size: cover;\r\n    background-position: top;\r\n    background-image: url(\"https://static.ziftsolutions.com/files/ff8081815f70731e015f781b10f42902/print-mailer_banner2.png\");\r\n text-align:center;\r\n   background-repeat: no-repeat;\r\n} \r\n\r\n.z_responsiveBanner h1 {\r\n color: black;\r\n    margin: 80px 20px 120px 20px;\r\n font-weight: 100;\r\n    font-size: 1.5em;\r\n text-align: left;\r\n}\r\n        \r\n        @media screen and (max-width: 420px) {\r\n            #z_wrapper .z_header{\r\n    font-size: 18px;\r\n   }\r\n .z_banner-width-adjust {\r\n width: 100% !important;\r\n} \r\n\r\n   #z_wrapper .z_partner_logo{\r\n    text-align: center;\r\n    padding: 20px 0;\r\n   }\r\n   .z_arrow {\r\n    display: none;\r\n   }\r\n   \r\n   .z_responsiveBanner {\r\n   background-image: url(\"https://static.ziftsolutions.com/files/ff8081815f70731e015f78e2c1933088/responsive-landing_banner.png\");\r\n    background-size: cover;\r\n    background-repeat: no-repeat;\r\n    text-align: center !important;\r\n   }\r\n        } <\/style> <\/span> <div id=\"z_wrapper\" class=\"z_xs z_sm z_md\"> <div class=\"z_container-fluid z_sansFont\"> <div class=\"z_row z_responsiveBanner\"> <div class=\"z_col-sm-6 z_banner-width-adjust\"> <h1>With AT&amp;T Content Delivery Network Security Solutions Protecting Your Website  and Web Applications, <strong>You’ll Sleep Easier,  Worry-Free.<\/strong><\/h1> <\/div> <\/div> <!--<div class=\"z_row\"><img class=\"z_banner\" src=\"https://static.ziftsolutions.com/files/ff8081815e550637015e629eba550129/banner_image.png\" alt=\"ATT Wants to Hear from You\" width=\"100%\" /><\/div> --> <div class=\"z_row z_body_row\" style=\"margin-top:20px;\"> <div class=\"z_col-md-8\" style=\"padding: 0px 30px;\"><img src=\"https://static.ziftsolutions.com/files/ff8081815e54f951015e719fa0ef232e/att_logo.png\" style=\"width: 100&#037;; max-width: 60px; MARGIN-BOTTOM: 15px;\" alt=\"\"/> <h3 style=\"font-weight: bold;\">Say ‘Goodbye’ to Worries about Web Fraud, DDoS, and Web Downtime<\/h3> <div class=\"z_body-wrapper\"> <p>You’ll rest easier when you choose security solutions that mitigate the risks and challenges of doing business online. The risks include website and web application slowdowns as well as security breaches, all of which can lead to lost revenue, customer churn, and a damaged brand reputation.<\/p> <p>We’d like to schedule a time for you and one of our security specialists to discuss your web security concerns. After your call with the specialist, arrangements will be made to send your &#036;50 Amazon gift card&#042; via email. Just fill out the form and our scheduler will be in touch.<\/p> <h3 style=\"font-weight: bold;\">What to Expect<\/h3> <ul> <li>Our scheduler will call you soon for an exploratory conversation to    further identify your challenges and potential need for AT&amp;T web    security solutions.<\/li> <li>The scheduler will also arrange an introductory conversation between   you and an AT&amp;T security specialist to discuss if AT&amp;T web security    solutions would be a good fit.<\/li> <li>After your conversation with the AT&amp;T security specialist, we’ll send    you the complimentary Amazon gift card&#042; via email.<\/li> <\/ul> <br/> <p><strong>This offer is being extended by TSL Marketing on behalf of AT&amp;T.<\/strong><\/p> <p style=\"font-size: 10px; font-style: italic;\">&#042;Gift cards are for qualified IT responders only and are limited while supplies last.<\/p> <\/div> <\/div> <div class=\"z_col-md-4\"> <div style=\"Margin:10px 0px;\"> <\/div> <div class=\"z_row\"> <div class=\"z_col-sm-5 z_arrow\" style=\"text-align:center; \"><img src=\"https://static.ziftsolutions.com/files/ff8081815f70731e015f78052b942760/left-arrow.png\" class=\"z_arrow\" alt=\"\"/><\/div> <div class=\"z_col-sm-7\"> <\/div> <\/div> <div class=\"z_formContainer\"> <div class=\"z_giftcardPosition\"> <\/div> <div class=\" z_row\"> <div class=\"z_col-sm-12\"><legend>Talk to AT&amp;T about web security and get a &#036;50 Amazon Gift Card&#042;.<\/legend> <div style=\"text-align: center\"><img src=\"https://static.ziftsolutions.com/files/ff8081815f70731e015f7806d1b12770/50-dollar-amazon_gift-card.png\" style=\"max-width: 300px; width: 100&#037;;\" alt=\"\"/><\/div> <form id=\"zFormId\" action=\"https://form.ziftsolutions.com/open/ExternalFormProcessor.html\" onsubmit=\"return zFormValidation(this)\" method=\"post\"> <fieldset> <div class=\"z_form-group\"><input placeholder=\"Full Name &#042;\" zf=\"Name\" id=\"name\" class=\"z_form-control\" type=\"text\" name=\"name\"/><\/div> <div class=\"z_form-group\"><input placeholder=\"Company Email &#042;\" zf=\"Email\" id=\"email\" class=\"z_form-control\" type=\"text\" name=\"email\"/><\/div> <div class=\"z_form-group\"><input placeholder=\"Phone &#042;\" zf=\"Phone Number\" id=\"phone_number\" class=\"z_form-control\" type=\"text\" name=\"phone_number\"/><\/div> <div class=\"z_form-group\"><input placeholder=\"Company &#042;\" id=\"company\" zf=\"Company\" class=\"z_form-control\" type=\"text\" name=\"company\"/><\/div> <div class=\"z_form-group\" style=\"margin-top: 25px;\"><input type=\"checkbox\" id=\"privacy_consent\" placeholder=\"blank\" zf=\"Privacy Consent\" class=\"form-control\" style=\"height:20px; width:20px; display:inline-block; vertical-align: top; margin: 2px 10px 0px 0px; box-shadow:none;\" cookie=\"ignore\" value=\"true\" name=\"privacy_consent\"/> <label for=\"privacy_consent\" style=\"display:inline-block; max-width: 80&#037;; font-weight: normal; text-align: left;\">I agree that <span name=\"Partner Display Name\">&#123;Partner Display Name&#125;<\/span> may process my personal data as provided in its <a href=\"NULL\" target=\"_blank\" style=\"color: &#035;FFFFFF;\">Privacy Policy<\/a>, including communicating with me about products and services made available by <span name=\"Partner Display Name\">&#123;Partner Display Name&#125;<\/span> or its partners.<\/label><\/div> <\/fieldset> <input ziftinternal=\"true\" name=\"pwid\" value=\"ff8081815f70731e015f782a7b192a1f\" type=\"hidden\"/><input ziftinternal=\"true\" name=\"pid\" value=\"ff8081815f70731e015f77eca1a625a4\" type=\"hidden\"/><input ziftinternal=\"true\" name=\"stepid\" value=\"ff8081815f70731e015f77ed042425aa\" type=\"hidden\"/><input ziftinternal=\"true\" name=\"confirmMsg\" id=\"confirmMsg\" value=\"\" type=\"hidden\"/><input name=\"zSubmissionRefId\" id=\"zSubmissionRefId\" value=\"\" type=\"hidden\"/><input name=\"stepff8081815f70731e015f77ed042425aa\" id=\"stepff8081815f70731e015f77ed042425aa\" value=\"submitted\" type=\"hidden\"/><input name=\"emailKey\" id=\"emailKey\" value=\"\" type=\"hidden\"/><input name=\"zt_uuid\" id=\"zt_uuid\" value=\"\" type=\"hidden\" cookie=\"ignore\" ziftinternal=\"true\"/><span action=\"https://form.ziftsolutions.com/open/ExternalFormProcessor.html\" onsubmit=\"return zFormValidation(this)\" method=\"post\" id=\"zFormId_bak\"><\/span><\/form> <div class=\"z_text-center\" style=\"font-size: 14px; color: &#035;fff;\"> <p class=\"z_form_err\" style=\"display: none;\">You have not completed all of the required fields.  Please complete the fields outlined in red.<\/p> <\/div> <div class=\"z_form-group\" style=\"margin-bottom:15px; text-align: center;\"><a class=\"z_btn z_button z_real_submit\" href=\"?zPage=Confirmation-0003275c\" style=\"display: none; text-align: center\" title=\"Confirmation\" zstepid=\"Confirmation-0003275c\" onclick=\"zPanel625a4.gotoPage('zPage','Confirmation-0003275c',this, true,false,null,null); return false;\">Submit My Survey<\/a> <a class=\"z_btn z_pull-right z_button submit\" style=\"cursor: pointer;\">Submit My Survey<\/a><\/div> <\/div> <\/div> <\/div> <\/div> <\/div> <\/div> <div class=\"z_row z_hr\" style=\"border-top:5px solid &#035;888888;\"> <\/div> <span name=\"Landing Footer Block.Content\"><div class=\"z_row z_footer\"> <div class=\"z_col-sm-12\"> <div class=\"z_partner-details\"> <div style=\"font-family: Arial, sans-serif;font-size:12px;Margin-bottom:16px;line-height:150&#037;\"><strong>Content Delivery Network at AT&amp;T<\/strong><br/> <span style=\"text-decoration:none\">TSL Marketing<br/> 8840 Stanford Blvd. Ste 3700<br/> Columbia, MD 21045<br/> <\/span><\/div> <\/div> <\/div> <div class=\"z_row z_text-center\"> <div class=\"z_col-12\" style=\"margin-top: 15px;\"> <div class=\"z_legal-text\">&copy;Copyright 2018<\/div> <\/div> <\/div> <\/div><\/span><\/div><br/> <\/span><\/span>","baseJS":"<script type='text/javascript'>\nfunction zGetNextPageInternal(param, link) {\nreturn 'ff8081815f70731e015f77ed042425aa';\n}\nfunction zGotoNextPageInternal(param, link) {\nzPanel625a4.setPageCookieForNextPage(zQStringValue('zPage'));\nzPanel625a4.incrementPageCount();\nzPanel625a4.gotoPage(param, zNextPage, link, true);\nreturn zNextPage;\n}\nfunction zFormValidation(formElem){\ntry { if (!formElem.elements['privacy_consent'].checked) { alert('Privacy Consent is required'); return false;}} catch (err) { return false;}\nreturn true;\n}\nfunction zSetDynamicPanelAttributes() { \nzPanel625a4.setExternalFormUrl('https://form.ziftsolutions.com/open/ExternalFormProcessor.html');\n}\n<\/script>","onloadJS":"<script type='text/javascript'>\nzDoPanelLoad();\n<\/script>","scriptIncludes":""};
+var s_24015 = document.createElement('div');s_24015.className = 'z_panel_base z_p_Akamai_ATT_Web_Security_Print_Mailer_Landing_Page z_ps_Landing';s_24015.id = 'pw_ff8081815f70731e015f782a7b192a1f';pt_ff8081815f70731e015f782a7b192a1f.appendChild(s_24015);
+s_24015.innerHTML = zContent.content;
+var s_24308 = document.createElement('span');pt_ff8081815f70731e015f782a7b192a1f.appendChild(s_24308);
+}
+function zGetNextPageInternal(param, link) {
+return 'ff8081815f70731e015f77ed042425aa';
+}
+function zGotoNextPageInternal(param, link) {
+zPanel625a4.setPageCookieForNextPage(zQStringValue('zPage'));
+zPanel625a4.incrementPageCount();
+zPanel625a4.gotoPage(param, zNextPage, link, true);
+return zNextPage;
+}
+function zFormValidation(formElem){
+try { if (!formElem.elements['privacy_consent'].checked) { alert('Privacy Consent is required'); return false;}} catch (err) { return false;}
+return true;
+}
+function zSetDynamicPanelAttributes() { 
+zPanel625a4.setExternalFormUrl('https://form.ziftsolutions.com/open/ExternalFormProcessor.html');
+}
+zDoPanelLoad();

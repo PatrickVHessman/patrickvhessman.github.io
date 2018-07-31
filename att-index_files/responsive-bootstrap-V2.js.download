@@ -1,0 +1,39 @@
+// JavaScript Document
+
+zAddOnLoad(function(){ zift_responsive_panel(); });
+//window.onload = function(){ zift_responsive_panel(); }
+window.onresize = function(){ zift_responsive_panel(); }
+
+// Global variable: Array of breakpoints
+var zBreaks = {"z_xs":400, "z_sm":750, "z_md":970, "z_lg":1200};
+
+// zift_responsive_panel. This function adds the appropriage size class to #z_wrapper
+function zift_responsive_panel (){
+	var zWidth = document.getElementById("z_wrapper").offsetWidth;
+	
+	switch(true) {
+		case ( zWidth <= zBreaks['z_xs'] ):
+			document.getElementById('z_wrapper').className='z_xs';
+			break;	
+		case ( zBreaks['z_xs'] < zWidth && zWidth <= zBreaks['z_sm'] ):
+			document.getElementById('z_wrapper').className='z_xs z_sm';
+			break;	
+		case ( zBreaks['z_sm'] < zWidth && zWidth <= zBreaks['z_md'] ):
+			document.getElementById('z_wrapper').className='z_xs z_sm z_md';
+			break;	
+		case ( zBreaks['z_md'] < zWidth && zWidth <= zBreaks['z_lg'] ):
+			document.getElementById('z_wrapper').className='z_xs z_sm z_md z_lg';
+			break;	
+		case ( zBreaks['z_lg'] < zWidth ):
+			document.getElementById('z_wrapper').className='z_xs z_sm z_md z_lg xl';
+			break;	
+	}
+}
+
+/* zSetBreakPoints. Use this function to reset the breakpoints
+   Ex. zSetBreakPoints( var breaks = {"z_xs":400, "z_sm":750, "z_md":970, "z_lg":1200} ); */
+function zSetBreakPoints( zNewBreaks ) {
+	for (var key in zNewBreaks) {
+		if ( key in zBreaks ) {	zBreaks[key] = zNewBreaks[key]; }
+	}
+}

@@ -1,0 +1,93 @@
+/* Pushed : Fri, 22 Jun 2018 7:14 PM UTC */
+ function validEmail(address){  
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(address))  
+  {  
+    return (true)  
+  }  
+    alert("Please enter a valid email address.")  ;
+    return (false)  
+}
+function validateForm(){
+  var valid = true;
+
+  //check first name, last name, email, company
+  
+  if($('input#name').val() == ''){
+   valid = false;
+   $('input#name').css('border','1px solid red');
+  }
+  else{
+   $('input#name').css('border','none');
+  }
+  if($('input#email').val() == '' || !validEmail($('input#email').val())){
+   valid = false;
+   $('input#email').css('border','1px solid red');
+  }
+  else{
+   $('input#email').css('border','none');
+  }
+  if($('input#company').val() == ''){
+   valid = false;
+   $('input#company').css('border','1px solid red');
+  }
+  else{
+   $('input#company').css('border','none');
+  }
+ 
+ if($('input#phone_number').val() == ''){
+   valid = false;
+   $('input#phone_number').css('border','1px solid red');
+  }
+  else{
+   $('input#phone_number').css('border','none');
+  }
+ 
+  console.log("valid: "+valid);
+  if(valid == true){
+   $(".z_real_submit").click();
+   $(".z_form_err").hide();
+  }
+  else{
+   $(".z_form_err").show();
+  }
+ }
+ function showOthers(){
+ console.log('showOthers');
+ $('.other-toggle').each(function () {
+  if($(this).is(":checked")){
+   $(this).parent().next('.other-content').addClass('show');
+  }
+ });
+ $('.other-toggle-2').each(function () {
+  if($(this).is(":checked")){
+   $(this).parent().siblings().children('.other-content-2').addClass('show');
+  }
+ });
+ }
+ $(document).ready(function(){
+  $('a[data-type]').venobox();
+  $('.other-toggle').each(function () {
+   $(this).on('click', function () {
+    if($(this).is(":checked")){
+  $(this).parent().next('.other-content').addClass('show');
+ }
+ else{
+  $(this).parent().next('.other-content').removeClass('show');
+ }
+   });
+  });
+  $('.other-toggle-2').each(function () {
+ $(this).on('click', function () {
+  if($(this).is(":checked")){
+   $(this).parent().siblings().children('.other-content-2').addClass('show');
+  }
+  else{
+   $(this).parent().siblings().children('.other-content-2').removeClass('show');
+  }
+ });
+  });
+  $('.z_button.submit').on('click',function(){
+   validateForm();
+  });
+  setTimeout(showOthers,1000);
+ }); 
