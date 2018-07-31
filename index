@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreeCodeCamp Responsive Web Design Project - Technical Documentation</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+	
+	<style>@charset "utf-8";
+/* CSS Document */
+
+#main-container {
+	overflow-y: scroll;
+	position: fixed;
+	right: 0;
+	height: 95%;
+}
+
+#main-container h1 {
+	margin-top: 20px;
+}
+
+#tableOfContents {
+	border-right: solid 1px #f7f7f7;
+	position: fixed;
+	left: 0;
+	height: 95%;
+	padding-top: 10px;
+}
+
+.tableOfContents-nav {
+	list-style: none;
+}
+
+.tableOfContents-nav li {
+	list-style: none;
+}
+
+section {
+	padding-top: 20px;
+		padding-bottom: 20px;
+}
+
+code {
+    display: block;
+    text-align: left;
+    white-space: pre;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 2;
+    background-color: #f7f7f7;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 10px 20px;
+	height: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+	#main-container, footer, #tableOfContents {
+		position: inherit;
+		height: auto;
+	}
+	#tableOfContents {
+		border: none;
+	}
+}</style>
+</head>
+
+<body>
+<div class="container-fluid">
+<div class="row">
+	<div class="col-sm-3 overflow" id="tableOfContents">
+	<nav>
+	<header><h2>Random Generators for Dungeons and Dragons</h2></header>
+		<ul class="tableOfContents-nav">
+		<li><a href="#introduction" class="nav-link">Introduction</a></li>
+			<li><a href="#Setting_Up_the_Function" class="nav-link">Setting Up the Function</a></li>
+			<li><a href="#Creating_the_Random_Number_Generator" class="nav-link">Creating the Random Number Generator</a></li>
+			<li><a href="#Create_a_Switch_Statement" class="nav-link">Creating a Switch Statement</a></li>
+			<li><a href="#Finishing_Up" class="nav-link">Finishing Up</a></li>
+			<li><a href="#Testing_it_Out" class="nav-link">Testing it Out</a></li>
+		</ul>
+	</nav>
+	</div>
+	<div class="col-sm-9 overflow" id="main-container">
+	<main id="main-doc">
+	<header><h1>Creating a Random Generator for Dungeons and Dragons</h1></header>
+	<section id="introduction" class="main-section">
+		<header><h2>Introduction</h2></header>
+	<p>As a Dungeon Master, you often find yourself in need of help for random events, discoveries, or encounters. The books provide many tables to roll dice for random elements, but why not automate the process?</p>
+<p>Simple JavaScript functions can be created to instantly run the random generations for you, and this guide will show you how!</p>
+		</section>
+		<section id="Setting_Up_the_Function" class="main-section">
+		<header><h2>Setting Up the Function</h2></header>
+		<p>The function to contain our random number and the generated values must be created. First, declare a variable to contain the value of your random generator.</p>
+			<code>var randomEncounter = "";</code>
+			<p>Next, name your function.</p>
+			<code>function encounterGenerator(value) {
+
+}</code>
+		</section>
+		<section id="Creating_the_Random_Number_Generator" class="main-section">
+		<header><h2>Creating the Random Number Generator</h2></header>
+			<p>Inside your function, create a new variable that contains a randomly generated number.</p>
+			<code>var randomNumber = Math.floor(Math.random()*6+1);</code>
+			<p>Replace the number 6 in the example below with however many variables the random table is supposed to have. Ie, a d10 table would look like this:</p>
+			<code>var randomNumber = Math.floor(Math.random()*10+1);</code>
+		</section>
+		<section id="Create_a_Switch_Statement" class="main-section">
+		<header><h2>Create a Switch Statement</h2></header>
+	<p>Now, we're going to create a <em>switch</em> statement that contains each of the possible outcomes of the random table. Pass the <em>randomNumber</em> variable into it.</p>
+			<code>switch(randomNumber) { 
+case 1: value = "Six kobolds"; break;
+case 2: value = "Five goblins"; break;
+case 3: value = "Four bandits"; break;
+case 4: value = "Three orcs"; break;
+case 5: value = "Two owlbears"; break;
+case 6: value = "One Tarrasque"; break;
+}</code>
+		</section>
+		<section id="Finishing_Up" class="main-section">
+		<header><h2>Finishing up</h2></header>
+		<P>Lastly, we'll pack up the randomly generated value we created and prepare to return it from the function.</P>
+			<code>return value;</code>
+			<p>Your code should look something like this:</p>
+			<code>var randomEncounter = "";
+				
+function encounterGenerator(value) {
+var randomNumber = Math.floor(Math.random()*6+1);
+switch(randomNumber) { 
+case 1: value = "Six kobolds"; break;
+case 2: value = "Five goblins"; break;
+case 3: value = "Four bandits"; break;
+case 4: value = "Three orcs"; break;
+case 5: value = "Two owlbears"; break;
+case 6: value = "One Tarrasque"; break;
+}
+				
+return value;
+}
+			</code>
+		</section>
+		<section id="Testing_it_Out" class="main-section">
+		<header><h2>Testing it Out</h2></header>
+		<p>Open up a JavaScript console and enter the code we just created and hit <em>Enter</em> on your keyboard. After that, type in this code to run the function:</p>
+			<code>encounterGenerator(randomEncounter);</code>
+		<p>After hitting <em>Enter</em> again, type in this code to display the random value:</p>
+			<code>console.log(randomEncounter);</code>
+		<p>The console will then display your encounter. Hope your random encounter isn't too devastating!</p>
+		</section>
+		</main>
+	</div>
+	</div>	
+	</div>
+	<footer>
+	Created by Patrick Hessman as part of the <a href="https://freecodecamp.org/" target="_blank">Free Code Camp</a> curriculum. 
+</footer>
+</body>
+</html>
