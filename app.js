@@ -3,8 +3,8 @@
 var keywords = ["cat","brown","bear","lazy","fox","Godzilla","Avengers","gigantic","quick"];
 
 function keywordCompare (arrayObject) {
-	for (var i = 0; i <= keywords.length; i++) {
-		if (arrayObject === keywords[i]) {
+	for (var i = 0; i < keywords.length; i++) {
+		if (arrayObject.toLowerCase() === keywords[i].toLowerCase()) {
 			arrayObject = "<u>" + arrayObject + "</u>";
 		}
 	}
