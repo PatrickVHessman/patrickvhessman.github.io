@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app>
+<head>
+<meta charset="utf-8">
+<title>Search String for Keywords</title>
+<link rel="text/css" href="StringSearch-style.css" rel="stylesheet"/>
+<script src="app.js"></script>
+</head>
+
+<body>
+<div id="main" ng-controller="keywordSearch">
+
+<h1>Search String for Keywords</h1>
+<div id="keywords">
+<h2>These are the keywords to search for:</h2>
+<ul>
+<li>cat</li><li>brown</li><li>bear</li><li>lazy</li><li>fox</li><li>Godzilla</li><li>Avengers</li><li>gigantic</li><li>quick</li>
+</ul>	
+	
+</div>
+<div id="mainContainer">
+<h3>String Input</h3>
+<form><input type="text" name="stringInput" ng-model="stringInput" id="stringInput"/></p>
+	<p><input type="button" name="submit" value="Submit" onClick="searchJSON()"/></p></form>
+	<h3 id="resultsHeader"></h3>
+	<p id="resultsCopy"></p>
+	</div>
+	</div>
+</body>
+</html>
