@@ -1,0 +1,15 @@
+/* Pushed : Tue, 7 Aug 2018 2:03 AM UTC */
+
+
+ var ctaColor = $('.z_btn').css("background-color");
+ 
+ function shadeRGBColor(color, percent) {
+    var f=color.split(","),t=percent<0?0:255,p=percent<0?percent*-1:percent,R=parseInt(f[0].slice(4)),G=parseInt(f[1]),B=parseInt(f[2]);
+    return "rgb("+(Math.round((t-R)*p)+R)+","+(Math.round((t-G)*p)+G)+","+(Math.round((t-B)*p)+B)+")";
+}
+ 
+ var bottomBorder = shadeRGBColor(ctaColor, -0.25);
+ 
+ $('.z_btn').css('border-bottom', '3px solid ' + bottomBorder);
+ 
+ 

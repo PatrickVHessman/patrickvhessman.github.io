@@ -1,0 +1,2 @@
+/* Pushed : Tue, 7 Aug 2018 2:03 AM UTC */
+addZiftLoadEvent(function(){ $(function () { $('a[data-type]').venobox(); });            var a = new Date(),                b = a.getFullYear(),                c = document.querySelector('.copyright-year');            c.innerHTML = b; });
